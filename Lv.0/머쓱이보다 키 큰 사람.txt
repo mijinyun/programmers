@@ -1,0 +1,6 @@
+function solution(array, height) {
+    const result = array.filter(function(students) {
+        return students > height;
+    })
+    return result.length;
+}

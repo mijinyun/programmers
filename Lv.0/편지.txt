@@ -1,0 +1,4 @@
+function solution(message) {
+    let 편지 = message.length;
+    return Math.ceil(편지*2);
+}
