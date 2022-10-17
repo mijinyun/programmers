@@ -1,0 +1,11 @@
+function solution(num_list) {
+    
+    var 짝수 = [];
+    var 홀수 = [];
+    
+    for (i=0; i<num_list.length; i++) {        
+        num_list[i] % 2 == 0 ? 짝수.push(num_list[i]) : 홀수.push(num_list[i]);
+    }
+    
+    return [ 짝수.length, 홀수.length];
+}

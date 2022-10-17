@@ -1,0 +1,10 @@
+function solution(n) {
+    var num = Math.sqrt(n);
+    var flag = true;
+    
+    if (Number.isInteger(num) == flag) {
+        return 1;
+    } else {
+        return 2;
+    }
+}

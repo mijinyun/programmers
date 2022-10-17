@@ -1,0 +1,6 @@
+function solution(money) {
+    let ame = Math.floor(money / 5500);
+    let rest = money - ame*5500;
+    
+    return [ame, rest];
+}

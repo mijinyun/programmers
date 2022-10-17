@@ -1,0 +1,11 @@
+function solution(n) {
+    
+    var arr = [];
+    for (let i=1; i < n + 1; i++) {
+        if ( Number.isInteger(n/i) == true ) {
+            arr.push(i);
+            
+        } 
+    }
+    return arr;
+} 

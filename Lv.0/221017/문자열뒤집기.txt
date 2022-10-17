@@ -1,0 +1,5 @@
+function solution(my_string) {
+    let string = my_string.split('');
+    string.reverse();
+    return string.join('')
+}

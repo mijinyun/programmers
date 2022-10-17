@@ -1,0 +1,6 @@
+function solution(array) {
+    let num = Math.max(...array);
+    let i = array.indexOf(num);
+    
+    return [num,i];
+}
