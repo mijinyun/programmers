@@ -1,0 +1,3 @@
+function solution(n, numlist) {
+    return result = numlist.filter((data) => {return data % n == 0;});
+}
