@@ -1,0 +1,14 @@
+function solution(num, k) {
+    const number = String(num);
+    const arr = [...number];
+    
+    const result = arr.map ( data => parseInt(data));
+    
+    if ( result.includes(k)) {
+        return result.findIndex( data => { return data == k})+1;
+    } else {
+        return -1;
+    }
+    
+    
+}
