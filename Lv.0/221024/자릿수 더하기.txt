@@ -1,0 +1,11 @@
+function solution(n) {
+    const string = String(n).split('');
+    
+    const result =[];
+    for (let i=0; i<string.length; i++) {
+        result.push(parseInt(string[i]))
+    }
+    let sum = 0;
+    result.map(data => { sum += data })
+    return sum;
+}

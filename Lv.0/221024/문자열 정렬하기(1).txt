@@ -1,0 +1,4 @@
+function solution(my_string) {
+    const result = my_string.replace(/[^0-9]/g , '').split('');
+    return result.map( (data) => data*1).sort((a,b) => {return a-b} );
+}

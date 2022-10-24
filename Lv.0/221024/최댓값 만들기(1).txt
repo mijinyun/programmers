@@ -1,0 +1,11 @@
+function solution(numbers) {
+    numbers.sort((a,b) => {return a-b});
+    
+    const Max = Math.max(...numbers);
+    
+    numbers.pop(Max);
+    
+    const Max2 = Math.max(...numbers);
+    
+    return Max*Max2;
+}
