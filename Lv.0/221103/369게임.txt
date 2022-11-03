@@ -1,0 +1,9 @@
+function solution(order) {
+    const arr = String(order).split('');
+    const result = arr.filter((value) => {
+        if ([3,6,9].includes(parseInt(value))) {
+            return value;
+        }
+    })
+    return result.length;
+}

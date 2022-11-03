@@ -1,0 +1,6 @@
+function solution(box, n) {
+    const result = box.map((value) => {
+        return Math.floor(value / n);  
+    });
+    return result[0] * result[1] * result[2];
+}

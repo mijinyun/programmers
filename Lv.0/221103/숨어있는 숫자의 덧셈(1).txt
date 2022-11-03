@@ -1,0 +1,11 @@
+function solution(my_string) {
+    const result = my_string.replace(/[^0-9]/g,'').split('');
+    const result2 = result.map((value) => { return parseInt(value)});
+    
+    const sum = result2.reduce((prev, cur) => {
+                               return prev + cur
+                               },0)
+    
+    return sum;
+    
+}
