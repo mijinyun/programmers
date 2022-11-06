@@ -1,0 +1,6 @@
+function solution(age) {
+    const test = String(age).split('');
+    const result = test.map((value) => parseInt(value) + 97);
+    const result2 = result.map((data) => String.fromCharCode(data));
+    return result2.join('');
+}

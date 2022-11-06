@@ -1,0 +1,9 @@
+function solution(numbers) {
+    const num = numbers.sort((a,b) => {return a-b});
+    
+    if ( num[0]*num[1] > num[num.length-1]*num[num.length-2]) {
+        return num[0]*num[1];
+    } else {
+        return num[num.length-1]*num[num.length-2]
+    }
+}
