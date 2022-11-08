@@ -1,0 +1,11 @@
+function solution(before, after) {
+    const before2 = [...before].sort().join('');
+    const after2 = [...after].sort().join('');
+    
+    if ( before2 === after2 ) {
+        return 1;
+    } else {
+        return 0;
+    }
+    
+}
