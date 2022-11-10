@@ -1,0 +1,21 @@
+function solution(i, j, k) {
+    let ls = [];
+    
+    for (let num = i; num <j+1; num++) {
+        ls.push(String(num));
+    }
+    
+    const arr =  [...ls].join('');
+    const arr2 = [...ls].join('').split(k).join('');
+    return arr.length - arr2.length;
+    
+}
+
+//다른풀이
+//function solution(i, j, k) {
+//    let a ='';
+//    for(i;i<=j;i++){
+//        a += i;
+//    }
+//    return a.split(k).length-1;
+//}

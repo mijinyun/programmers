@@ -1,0 +1,14 @@
+function solution(n) {
+    
+    let sum=1;
+    let i=1;
+    
+    while (true) {
+        sum = sum * i;
+        if (sum > n) {
+            return i-1;
+            break;
+        }
+        i++;
+    }
+}

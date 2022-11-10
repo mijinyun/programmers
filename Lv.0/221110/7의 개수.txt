@@ -1,0 +1,17 @@
+function solution(array) {
+    const result = [...array].map((v) => { return String(v).split('')} );
+    let ls = [];
+    result.map((f)=> {
+        f.map((v)=> { f.includes(v) && ls.push(v) });   
+    })
+    
+    const a = ls.filter((v) => { return v == 7 });
+    return a.length;
+    
+}
+
+//다른풀이
+//function solution(array) {
+//    const arr = [...array].join('').split('7');    
+//    return arr.length-1;
+//}
