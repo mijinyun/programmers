@@ -1,0 +1,9 @@
+function solution(my_str, n) {
+    
+    let ls = [];
+    for (let i=0; i([...my_str].length)n; i++) {
+        const a = [...my_str].slice(ni,n(i+1)).join('');    
+        ls.push(a);
+    }
+    return ls;
+}

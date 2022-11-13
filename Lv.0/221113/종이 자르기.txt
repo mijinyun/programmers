@@ -1,0 +1,6 @@
+function solution(M, N) {
+    // 가로 = M -1 번
+    // 세로 = M * (N-1) 번
+    
+    return (M-1) + ( M * (N-1));
+}

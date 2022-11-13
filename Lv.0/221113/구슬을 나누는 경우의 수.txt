@@ -1,0 +1,10 @@
+function solution(balls, share) {
+    
+    let top = balls
+    let bottom = share
+    for ( let i=1; i< share; i++) {
+        top = top * (balls-i);
+        bottom = bottom * ( share-i);
+    }
+    return top/bottom;
+}
