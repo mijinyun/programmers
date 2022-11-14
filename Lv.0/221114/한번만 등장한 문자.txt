@@ -1,0 +1,14 @@
+function solution(s) {
+    
+    // let answer = "";
+    // for (let i=0; i< s.length; i++){
+    //     if (s.indexOf(s[i]) === 1) answer += s[i];
+    // }
+    
+    const dict = {}
+    s.split('').forEach(a => dict[a] !== undefined ? dict[a]+=1 : dict[a] = 1)
+    const aaa = Object.entries(dict).map(a => a[1] === 1 ? a[0] : null);
+    
+    return aaa.filter(a => a !== null).sort().join("")
+
+}
