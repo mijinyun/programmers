@@ -1,0 +1,14 @@
+function solution(dots) {
+    let garo = [];
+    let sero = [];
+    
+    for (let i=0; i<dots.length; i++) {
+        garo.push(dots[i][0]);
+        sero.push(dots[i][1]);
+    }
+
+    const garoMax = Math.abs(Math.max(...garo)-Math.min(...garo));
+    const seroMax = Math.abs(Math.max(...sero)-Math.min(...sero));
+   
+    return garoMax * seroMax;
+}

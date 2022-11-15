@@ -1,0 +1,6 @@
+function solution(id_pw, db) {
+    const [id ,pw] = id_pw;
+    
+    if (!db.find(([v]) => v === id)) return "fail";  
+    return db.find(([a,b]) => (a === id) && (b === pw)) ? "login" : "wrong pw";
+}

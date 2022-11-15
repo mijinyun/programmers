@@ -1,0 +1,8 @@
+function solution(emergency) {
+    const arr = [...emergency].sort((a,b) => { return b-a;});
+    
+    const result = emergency.map((val) => {
+        return arr.findIndex(v => (v == val))+1;
+    })
+    return result;
+}

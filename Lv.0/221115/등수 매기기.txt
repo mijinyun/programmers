@@ -1,0 +1,9 @@
+function solution(score) {
+    const arr = [...score].map(([a,b]) => (a+b)/2);
+    const prior = [...arr].sort((a,b) => {return b-a;});
+    
+    const result = arr.map((val) => {
+        return prior.findIndex(v => v == val)+1;
+    });
+    return result;
+}
