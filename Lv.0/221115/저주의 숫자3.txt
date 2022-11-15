@@ -1,0 +1,14 @@
+function solution(n) {
+    //1 2 4 5 7 8 10 11 14 16 17 19 20 22 25 26 28 29 40 ...
+    
+    let i = 0;
+    let count = 0;
+    while (true) {
+
+        i++;
+        (i % 3 == 0) || String(i).includes('3') ? count : count++;
+          
+        if (count == n ) break;
+    }
+    return i;
+}

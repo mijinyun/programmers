@@ -1,0 +1,14 @@
+function solution(quiz) {
+    const test = [...quiz].map((v) => { return v.split(' = ')});
+    const test2 = [...test].map(v => eval(v[0]));
+    
+    let result = [];
+    for (let i=0; i<test2.length; i++ ){
+        if ( test2[i] == test[i][1] ) {
+            result.push("O");
+        } else { 
+            result.push("X");
+        }
+    }
+    return result;
+}
