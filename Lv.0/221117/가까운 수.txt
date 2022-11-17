@@ -1,0 +1,26 @@
+function solution(array, n) {    
+    // 배열을 돌면서 만약에 n을 뺀 절댓값이 가장 작으면 그 값의 index를 내보냄.
+    // 만약에 가장 작은 값이 여러개이면 그중에서 더 작은 수의 index를 내보냄.
+    
+    const arr = [...array].map((v) => { return Math.abs(v-n)});
+    const minNum = Math.min(...arr);
+    
+    let ls = [];
+    let findIdx = arr.indexOf(minNum);
+    while( findIdx != -1) {
+        ls.push(findIdx);
+        findIdx = arr.indexOf(minNum, findIdx+1);
+    }
+    
+    if ( ls.length > 1) {
+        let arrls = [];
+        for (let i=0; i< ls.length; i++){
+            arrls.push(array[ls[i]]);
+        }
+        return Math.min(...arrls);
+        
+    } else {
+        return array[ls[0]];
+    }
+
+}
