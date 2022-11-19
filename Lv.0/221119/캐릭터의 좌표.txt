@@ -1,0 +1,27 @@
+function solution(keyinput, board) {
+    
+    const go = {
+        up:[0,1],
+        down:[0,-1],
+        left:[-1,0],
+        right:[1,0]
+    }
+    
+    
+    let [x,y]=[...board];
+    let garo = 0;
+    let sero = 0;
+    const arr = [...keyinput].map(v => go[v]);
+    for (let i=0; i<arr.length; i++) {
+        garo += arr[i][0];
+        sero += arr[i][1];
+    
+        if (garo > Math.floor(board[0]/2)) garo = Math.floor(board[0]/2);
+        else if (garo < -Math.floor(board[0]/2)) garo = -Math.floor(board[0]/2);
+
+        if (sero > Math.floor(board[1]/2)) sero = Math.floor(board[1]/2);
+        else if (sero < -Math.floor(board[1]/2)) sero = -Math.floor(board[1]/2);
+    }
+    
+    return [garo, sero];
+}

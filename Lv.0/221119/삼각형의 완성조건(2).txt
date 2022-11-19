@@ -1,0 +1,19 @@
+function solution(sides) {
+    const side = sides.sort((a,b) => { return a-b;});
+    
+    let ls=[];
+    let i= 0; 
+    while(i<side[0]+side[1]) {
+        i++;
+        if (( i + side[0] > side[1] ) && (i <= side[1]) ) {
+            ls.push(i);
+        } else if ( (i > side[1]) && (i < side[0] + side[1])) {
+            ls.push(i);
+        }
+    }    
+    return ls.length;
+}
+
+//다른풀이
+//return Math.min(...sides)*2-1
+//배열에서 가장 작은 값의 2배하고 -1해준 값이 나머지 한변이 될 수 있는 정수의 갯수와 관련있다.

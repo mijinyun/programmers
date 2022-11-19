@@ -1,0 +1,10 @@
+function solution(spell, dic) {
+    const arr = [...dic].map(v => [...v].sort().join(''));
+    
+    const result = [...arr].filter(v => v == spell.sort().join(''));
+    if ( result.length != 0 ) {
+        return 1;
+    } else {
+        return 2;
+    }
+}
