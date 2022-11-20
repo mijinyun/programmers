@@ -1,0 +1,21 @@
+function solution(s) {
+    const arr = s.split(" ");
+    
+    let ls=[];
+    
+    for (let i=0; i < arr.length; i++) {
+        
+        if ( arr[i] == 'Z') {
+            ls.pop();
+        } else { 
+            ls.push(Number(arr[i]));
+        }
+    }
+    console.log(ls);
+    let sum = 0;
+    for (let i=0; i< ls.length; i++ ) {
+        sum += ls[i];
+    }
+    
+    return sum;
+}
