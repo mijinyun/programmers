@@ -1,0 +1,43 @@
+function solution(polynomial) {
+    const text = polynomial.split(" + ");
+    
+    let ls =[];
+    let num =[];
+    [...text].filter((v) => {
+        if ( v.includes('x')) { 
+            ls.push(v) 
+        } else { 
+            num.push(v)
+        }
+    })
+    
+    const x_list = [...ls].map((v) => {
+        if (v.replace('x','') == '') {
+            return 1;
+        } else {
+            return parseInt(v);
+        }
+    })
+    
+    const num_list = [...num].map(v => parseInt(v));
+    
+    let x_sum=0;
+    let num_sum=0;
+    for (let i=0; i<x_list.length; i++) {
+        x_sum += x_list[i];
+    }
+    for (let i=0; i<num_list.length; i++) {
+        num_sum += num_list[i];
+    }
+        
+    if(x_sum == 0) {
+        return num_sum == 0 ? 0 : String(num_sum);
+    } else {      
+        if (num_sum == 0) {
+            return (x_sum == 1) ? 'x' : x_sum + 'x';
+        } else {
+            return (x_sum == 1) ? 'x + '+ num_sum : x_sum + 'x + ' + num_sum;
+        }
+    }
+      
+}

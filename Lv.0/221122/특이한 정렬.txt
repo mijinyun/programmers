@@ -1,0 +1,12 @@
+function solution(numlist, n) {
+
+    // const arr = [...numlist].map(v => v-n);
+    // console.log(arr);
+    
+    const result = [...numlist].sort((a,b) => {
+        if ( Math.abs(a-n) == Math.abs(b-n)) return b-a;
+        return Math.abs(a-n) - Math.abs(b-n);
+    })
+    return result;
+    
+}

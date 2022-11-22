@@ -1,0 +1,20 @@
+function solution(array) {
+ 
+    let obj = {};
+    const arr = array.map((v) => {
+        if (obj[v] == undefined) {
+            obj[v] = 1;
+        } else {
+            obj[v] += 1;
+        }
+    })
+    
+    const ls = Math.max(...Object.values(obj));
+    
+    const res =Object.keys(obj).filter(key => obj[key] == ls);
+    if ( res.length > 1 ) {
+        return -1;
+    } else {
+        return parseInt(res);
+    }
+}
